@@ -12,7 +12,7 @@ html {
 
 body {
   font-family: "Alata", sans-serif;
-  font-size: 15px;
+  font-size: 25px;
   line-height: 1.7;
   color: #777;
   background-color: #fff;
@@ -83,6 +83,7 @@ a {
 }
 
 .header__link {
+  font-weight: 700;
   padding-bottom: 4px;
   border-bottom: 1px solid transparent;
   transition: border-color 0.2s;
@@ -170,6 +171,7 @@ a {
   letter-spacing: 2px;
   text-transform: uppercase;
   color: #000;
+  line-height: 1.1;
 }
 
 .creations__list {
@@ -189,7 +191,7 @@ a {
 .card__image {
   width: 100%;
   height: 100%;
-  /* object-fit: cover; */
+  object-fit: cover;
 }
 
 .card::after {
@@ -282,6 +284,14 @@ a {
 
 /* Tablet  */
 @media (max-width: 900px) {
+  body {
+    font-size: 20px;
+  }
+
+  .header__list {
+    gap: 20px;
+  }
+
   .creations__list {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -302,6 +312,10 @@ a {
 
 /* Mobile  */
 @media (max-width: 700px) {
+  body {
+    font-size: 18px;
+  }
+
   .header__inner {
     padding-top: 30px;
   }
@@ -364,13 +378,14 @@ a {
 
   .hero__title {
     padding: 24px;
-    font-size: 40px;
+    font-size: 34px;
     letter-spacing: 2px;
   }
 
   .interactive {
     flex-direction: column;
     align-items: stretch;
+    padding-top: 60px;
   }
 
   .interactive__image {
@@ -404,5 +419,36 @@ a {
 
   .card {
     aspect-ratio: 16 / 10;
+  }
+
+  .footer__inner {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "logo"
+      "nav"
+      "social"
+      "copy";
+    justify-items: center;
+    text-align: center;
+    row-gap: 30px;
+  }
+
+  .footer__list {
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+  }
+
+  .social {
+    justify-content: center;
+  }
+}
+
+/* Small phones (iPhone SE 1st gen) */
+@media (max-width: 360px) {
+  .hero__title {
+    padding: 20px;
+    font-size: 28px;
+    letter-spacing: 1px;
   }
 }
